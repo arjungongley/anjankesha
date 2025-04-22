@@ -33,6 +33,18 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en" style={{scrollBehavior:'smooth'}}>
         <Head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-P6JSD804T1"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-P6JSD804T1');
+            `
+          }}
+        />
+
           {/*======================== Google Fonts ========================*/}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
